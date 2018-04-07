@@ -10,10 +10,12 @@
 
 <body>
  <h1>Welcome to Moringa Bank</h2>
+  <form id="register">
    <div class="row">
-   <div class="col-md-4">
+   <div class="col-md-4" id="registerAccountDiv">
      <h3>Register New Account<h3>
-       <form id="register">
+
+       
            <div class="form-group">
              <label for="name">Name</label>
              <input type="text" class="form-control" id="name">
@@ -22,56 +24,40 @@
              <label for="deposit">InitialDeposit</label>
              <input type="text" class="form-control" id="deposit">
            </div>
+
+           <button class="btn btn-danger" onclick="onRegister()">Create New User</button>
          <!-- </form/> -->
 
      </div>
-     <div class="col-md-4">
+     <div class="col-md-4" id="DepositWithdrawDiv" hidden="true">
        <h3>Deposit or Withdraw cash<h3>
          <!-- <form id="new"> -->
            <div class="form-group">
-             <label for="amountdeposited">DepositAmount</label>
-             <input type="text" class="form-control" id="amount">
+             <label for="amountDeposited">DepositAmount</label>
+             <input type="text" class="form-control" id="amountDeposited">
            </div>
            <div class="form-group">
-             <label for="withdraw">WithdrawAmount</label>
-             <input type="text" class="form-control" id="Withdraw">
+             <label for="amountWithdrawn">WithdrawAmount</label>
+             <input type="text" class="form-control" id="amountWithdrawn">
            </div>
-           <button type="submit" class="btn btn-danger">confirm</button>
-         </form>
+
+           <button class="btn btn-danger" onclick="onUpdateBalance()">Update Balance</button>           
+         
    </div>
+
  </div>
+ 
+ </form>
 
- <script src="js/jquery-3.3.1.js"></script>
- <script src="js/scripts.js"></script>
- <script type="text/javascript">
-// BackEnd logic
-function register(name,deposit){
- this.Name =name;
- this.InitialDeposit =deposit;
- this.newBal =
-}
-function new(DepositAmount,WithdrawAmount){
- this.DepositAmount =amountdeposited;
- this.WithdrawAmount =withdraw;
-}
-register.prototype.Name = function () {
- return this.Name +"" + this.IntialDeposit;
-}
-new.prototype.DepositAmount = function (){
-return this.DepositAmount + "" + this.WithdrawAmount;
-
-}
-// Front end logic
-$(document).ready(function() {
- $("form#register").submit(function(event){
-   event.preventDefault();
-   var inputtedName = $("input#Name").val();
-   var inputtedInitialDeposit = $("input#InitialDeposit").val();
-
- }
-}
-</script>
+    <div>
+     <h2 id="nameDisplay"></h2>
+     <h3 id="amountDisplay"></h3>
+   </div>
 
 </body>
+
+  <script src="js/jquery-3.2.1.js"></script>
+  <script src="js/scripts.js"></script>
+  <script src="js/bank.js"></script>
 
 </html>
