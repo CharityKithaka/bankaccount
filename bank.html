@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+ <link href="css/styles.css" rel="stylesheet" type="text/css">
+ <title>Bank Account
+ </title>
+</head>
+
+<body>
+ <h1>Welcome to Moringa Bank</h2>
+   <div class="row">
+   <div class="col-md-4">
+     <h3>Register New Account<h3>
+       <form id="register">
+           <div class="form-group">
+             <label for="name">Name</label>
+             <input type="text" class="form-control" id="name">
+           </div>
+           <div class="form-group">
+             <label for="deposit">InitialDeposit</label>
+             <input type="text" class="form-control" id="deposit">
+           </div>
+         <!-- </form/> -->
+
+     </div>
+     <div class="col-md-4">
+       <h3>Deposit or Withdraw cash<h3>
+         <!-- <form id="new"> -->
+           <div class="form-group">
+             <label for="amountdeposited">DepositAmount</label>
+             <input type="text" class="form-control" id="amount">
+           </div>
+           <div class="form-group">
+             <label for="withdraw">WithdrawAmount</label>
+             <input type="text" class="form-control" id="Withdraw">
+           </div>
+           <button type="submit" class="btn btn-danger">confirm</button>
+         </form>
+   </div>
+ </div>
+
+ <script src="js/jquery-3.3.1.js"></script>
+ <script src="js/scripts.js"></script>
+ <script type="text/javascript">
+// BackEnd logic
+function register(name,deposit){
+ this.Name =name;
+ this.InitialDeposit =deposit;
+ this.newBal =
+}
+function new(DepositAmount,WithdrawAmount){
+ this.DepositAmount =amountdeposited;
+ this.WithdrawAmount =withdraw;
+}
+register.prototype.Name = function () {
+ return this.Name +"" + this.IntialDeposit;
+}
+new.prototype.DepositAmount = function (){
+return this.DepositAmount + "" + this.WithdrawAmount;
+
+}
+// Front end logic
+$(document).ready(function() {
+ $("form#register").submit(function(event){
+   event.preventDefault();
+   var inputtedName = $("input#Name").val();
+   var inputtedInitialDeposit = $("input#InitialDeposit").val();
+
+ }
+}
+</script>
+
+</body>
+
+</html>
